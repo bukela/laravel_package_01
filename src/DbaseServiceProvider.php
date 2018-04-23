@@ -26,5 +26,6 @@ class DbaseServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/views', 'dbase');
         $this->app->make('Mirko\Dbase\DbaseController');
+        // $this->app->alias("dbase", "Mirko\Dbase\Dbase");
     }
 }

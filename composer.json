@@ -1,61 +1,48 @@
 {
     "name": "mirko/dbase",
     "type": "library",
-    "description": ":package_description",
-    "keywords": [
-        "mirko",
-        "dbase"
-    ],
-    "homepage": "https://github.com/mirko/dbase",
-    "license": "MIT",
+    "description": "package test",
+    "keywords": ["demo"],
+    "homepage": "https://gitlab.com/dinfi/demo",
+    "license": "proprietary",
     "authors": [
-        {
-            "name": "mirko",
-            "email": "bukela@gmail.com",
-            "homepage": "http://mirko.com",
-            "role": "Developer"
-        }
+      {
+        "name": "mirko",
+        "email": "bukela@gmail.com",
+        "homepage": "https://mirko.com",
+        "role": "developer"
+      }
     ],
     "require": {
-        "illuminate/support": "~5.1",
-        "php" : "~5.6|~7.0"
+      "php": "^7.1.3"
     },
     "require-dev": {
-        "phpunit/phpunit" : ">=5.4.3",
-        "squizlabs/php_codesniffer": "^2.3"
+      "phpunit/phunit": ">=5.4.3"
     },
     "autoload": {
-        "psr-4": {
-            "mirko\\dbase\\": "src"
-        }
+      "psr-4": {
+        "Mirko\\Dbase\\": "src"
+      }
     },
     "autoload-dev": {
-        "psr-4": {
-            "mirko\\dbase\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "phpunit",
-        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+      "psr-4": {
+        "Mirko\\Dbase\\": "tests"
+      }
     },
     "extra": {
-        "laravel": {
-            "providers": [
-                "Mirko\\Dbase\\DbaseServiceProvider"
-            ],
-            "aliases": {
-                "Junior": "Mirko\\Dbase\\DbaseFacade"
-            }
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "repositories": [
-        {
-        "type":"git",
-        "url":"git@github.com:bukela/laravel_package_01.git"
-        }
-    ]
-}
+          "laravel": {
+              "providers": [
+                  "Mirko\\Dbase\\DbaseServiceProvider"
+              ],
+              "aliases": {
+                  "Dbase": "Mirko\\Dbase\\DbaseFacade"
+              }
+          }
+      },
+      "prefer-stable": true,
+      "minimum-stability": "dev",
+      "config": {
+          "sort-packages": true
+      }
+  }
+  
