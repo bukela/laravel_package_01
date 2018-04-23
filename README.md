@@ -1,4 +1,4 @@
-in require add "mirko/dbase": "@dev"
+in require add "mirko/dbase": "@dev" <br/>
 in repositories add:
         {
         "type":"git",
