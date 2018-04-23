@@ -7,6 +7,6 @@ use App\Http\Controllers\Controller;
 class DbaseController extends Controller
 {
     public function index() {
-        return view('dbase::dbase', compact('posts'));
+        return view('dbase::dbase');
     }
 }

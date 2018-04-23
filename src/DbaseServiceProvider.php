@@ -25,5 +25,6 @@ class DbaseServiceProvider extends ServiceProvider
     public function register()
     {
         $this->loadViewsFrom(__DIR__.'/views', 'dbase');
+        $this->app->make('Mirko\Dbase\DbaseController');
     }
 }
