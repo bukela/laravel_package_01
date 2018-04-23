@@ -13,8 +13,10 @@ class DbaseServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__.'../src/migrate');
-        $this->loadRoutesFrom(__DIR__.'/routes');
+        if(!$this->app->routesAreCached()){
+            require __DIR__.'/routes.php';
+        }
+        $this->loadMigrationsFrom(__DIR__.'/migrate');
     }
 
     /**
@@ -26,6 +28,6 @@ class DbaseServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/views', 'dbase');
         $this->app->make('Mirko\Dbase\DbaseController');
-        // $this->app->alias("dbase", "Mirko\Dbase\Dbase");
+        $this->app->alias("dbase", "Mirko\Dbase\Dbase");
     }
 }
